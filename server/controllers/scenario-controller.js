@@ -25,10 +25,11 @@ const createScenario = (req, res) => {
   }
 
   // create Master to execute new scenario
-  dockerController.createMaster(req, res);
+  var returnMessage = dockerController.createMaster(req, res);
+  console.log('returnMessage', returnMessage);
 
   // request.post({
-  //   url: 'http://localhost:3000/go', // Change this endpoint to master server api
+  //   url: 'http://master1:3000/go', // Change this endpoint to master server api
   //   method: 'POST',
   //   json: true,
   //   body: data,
